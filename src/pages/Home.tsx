@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Header from '../components/Header';
 import FilterPanel from '../components/FilterPanel';
 import VisualizationPanel from '../components/VisualizationPanel';
+import BlindTestPanel from '../components/blindtest/BlindTestPanel';
 import MemoryCard from '../components/MemoryCard';
 import MemoryModal from '../components/MemoryModal';
 import { useMemoryStore } from '../store/memoryStore';
@@ -79,6 +80,8 @@ export default function Home() {
         />
 
         <VisualizationPanel memories={filteredMemories} onSelect={scrollToCard} />
+
+        <BlindTestPanel memories={memories} />
 
         <section className="mt-2">
           <div className="flex items-center justify-between mb-4">
